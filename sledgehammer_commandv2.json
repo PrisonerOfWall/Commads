@@ -1,0 +1,82 @@
+user=u.toLowerCase();
+tuser=w.toLowerCase();
+nuser=r.substring(0, r.length-1);
+bunnybash=Math.floor(Math.random()*5);
+choose=Math.floor(Math.random()*11);
+rng=Math.floor(Math.random()*999 + 2);
+pheart=String.fromCodePoint(0x1F49C);
+brain=String.fromCodePoint(0x1F9E0);
+rheart=String.fromCodePoint(0x1F49E);
+
+if (user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+{
+	u = 'Icy';
+}
+
+if (user==tuser && user==nuser)
+{
+	w='Nightbot';
+}
+else if (user==tuser)
+{
+	if (nuser=='madrucksack' && user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+	{
+		w = 'Muk';
+	}
+	else if (nuser=='sweet_tarte_' && user!='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+	{
+		w = 'Icy';
+	}
+	else
+	{
+		w = nuser;
+	}
+}
+else if (tuser=='madrucksack' || tuser=='madruck' || tuser=='ruck')
+{
+	if (user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+	{
+		w = 'Muk';
+	}
+}
+else if (tuser=='sweet_tarte_')
+{
+	w = 'Icy';
+}
+
+bonk=[
+	u+' swings their hammer at '+w+' but '+w+' sees it coming a mile away! With quick ninja-like reflexes '+w+' easily slaps '+u+'\'s wrist to steal away the hammer and launch '+u+' into a double-damage, counter orbit! 🌠',
+	u+' launches '+w+' into orbit with their hammer swing of justice!! 👨‍⚖️ 🌍',
+	u+' borrows Icy\'s "Sledgehammer of Mega Doom" to bonk '+w+' '+rng+' times! Look at those lumps!! 😨',
+	w+' is flattened by '+u+'\'s hammer!! 😱 That\'s gotta hurt!!',
+	u+' ️tornado spins their hammer 🌪 square into '+w+'\'s face, bonking their teeth out!! 🦷 😬',
+	u+' bonks '+w+' with no mercy!! 🔨️',
+	u+' swings their hammer at '+w+'\'s feet out from under them! See you next "Fall"!! 🍁',
+	u+' hammers into each and every one of '+w+'\'s limbs, snapping their bones in twain! 🤕 Maybe that was a bit much?...',
+	u+' bonks '+w+' into pulverized dust! 💨',
+	u+' bonks '+w+' but their hammer ricochets and bonks them back! Guess they both deserved this one... 🤷',
+	u+' swings up their hammer to bonk '+w+', but hits themself on the head with the upswing! ehehehehehe 🤣'
+];
+
+sledgehammer=[
+	u+' takes out her "Sledgehammer of Mega Doom" to decimate AWall into lone pebbles! RUN AWALL RUN!!!!! OOH! AHH! OOP! 😈',
+	u+' smirks devilishly at AWall... and produces her MEGA SLEDGEHAMMER!!! It\'s too late! AWall\'s bricks go tumbling down after the horrible massacre!! 🧱 💥 🧱',
+	'AWall sweats nervously as '+u+' slowly walks toward him swinging her hammer back and forth in her hands! She swings her hammer at AWall\'s head but stops abrubtly before the hit! "That\'s a warning AWall! I\'m watching you!!" ✌️',
+	u+' throws her hammer at AWall and... gets a DIRECT HIT to his blockhead face! OOOHHH! He probably deserved it anyways! 😆',
+	u+' throws her hammer at AWall and... misses him by an inch! But, no matter! AWall\'s bricks fall loose and topple from the stress alone... 😂'
+];
+
+bunnybarrage = u+' takes out her "Sledgehammer of Mega Doom" to bonk '+w+' '+rng+' times! Look at those bruises!! 😨';
+
+if (user=='sweet_tarte_' && w.toLowerCase()=='privateawall')
+{
+	sledgehammer[bunnybash]
+}
+else if (user=='sweet_tarte_' && choose==2)
+{
+	bunnybarrage
+}
+else
+{
+	bonk[choose]
+}
