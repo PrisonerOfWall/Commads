@@ -1,0 +1,52 @@
+user=u.toLowerCase();
+tuser=w.toLowerCase();
+nuser=r.substring(0, r.length-1);
+choose=Math.floor(Math.random()*11);
+rng=Math.floor(Math.random()*999 + 2);
+pheart=String.fromCodePoint(0x1F49C);
+brain=String.fromCodePoint(0x1F9E0);
+rheart=String.fromCodePoint(0x1F49E);
+
+if (user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+{
+	u = 'Icy';
+}
+
+if (user==tuser && user==nuser)
+{
+	w='Nightbot';
+}
+else if (user==tuser)
+{
+	if (nuser=='madrucksack' && user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+	{
+		w = 'Muk';
+	}
+	else
+	{
+		w = nuser;
+	}
+}
+else if (tuser=='madrucksack' || tuser=='madruck' || tuser=='ruck')
+{
+	if (user=='sweet_tarte_' && Math.floor(Math.random()*3)<2)
+	{
+		w = 'Muk';
+	}
+}
+
+bite=[
+	u+' attempts to bite '+w+' in fondness but '+w+' is ready! '+w+' dodges and bites into '+u+'\'s hand with the vigurous fury of friendship! :3',
+	u+' lovingly bites '+w+', leaving teeth marks of friendship! '+pheart,
+	u+' lunges at '+w+' with teeth bared and bites \'em '+rng+' times! bleedPurple ...That\'s '+rng+' marks of lub and affection!',
+	w+' is caught off guard as '+u+' chomps down affectionately on '+w+'\'s neck! bleedPurple',
+	u+' sinks teeth into '+w+'\'s head giving \'em a direct dose of appreciation to the nervous system! '+brain+' '+pheart,
+	u+' bite '+w+' ...rly hard!! ❤️',
+	u+'\'s teeth pierce '+w+'\'s flesh with love! '+pheart,
+	u+' immobilizes and bites each of '+w+'\'s individual fingers slowly and methodically with love, one by one. bleedPurple',
+	u+' clamps teeth into '+w+'\'s arm and never lets go! '+w+' tries to push \'em off, but '+u+' won\'t budge as a testament to their great "bond!" PogBones',
+	u+' bites '+w+'\'s arm and '+w+' bites '+u+'\'s arm back in retaliation, leaving a bite circle of friendship! '+rheart,
+	u+' tries to bite '+w+', but trips and bites their own leg instead! 😢 OOF!! That\'s okay... '+w+' appreciates the attempt and gives '+u+' headpats! 👋 💕 '
+];
+
+bite[choose]
